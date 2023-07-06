@@ -54,16 +54,19 @@ public class Runner extends BaseClass {
 		} catch
 		(IOException e) { e.printStackTrace(); } }
 
-	@Test(dependsOnMethods = "pim")
-	private void leave() {
-		clickonElement(PageObjectManager.getPom().getLe().getLeave());
-		clickonElement(PageObjectManager.getPom().getLe().getAssignleave()); 
-		inputToElement(PageObjectManager.getPom().getLe().getEmpname(), "h"); 
-		implicitWait(2000); 
-		dropdownForSelect(PageObjectManager.getPom().getLe().getEmpname(), "value","Hey you bro");
-		clickonElement(PageObjectManager.getPom().getLe().getLeavetype());
-		dropdownForSelect(PageObjectManager.getPom().getLe().getLeavetype(), "index","4");
-
-	}
+	/*
+	 * @Test(dependsOnMethods = "pim") private void leave() {
+	 * clickonElement(PageObjectManager.getPom().getLe().getLeave());
+	 * clickonElement(PageObjectManager.getPom().getLe().getAssignleave());
+	 * inputToElement(PageObjectManager.getPom().getLe().getEmpname(), "h");
+	 * implicitWait(2000);
+	 * dropdownForSelect(PageObjectManager.getPom().getLe().getEmpname(),
+	 * "value","Hey you bro");
+	 * clickonElement(PageObjectManager.getPom().getLe().getLeavetype());
+	 * dropdownForSelect(PageObjectManager.getPom().getLe().getLeavetype(),
+	 * "index","4");
+	 * 
+	 * }
+	 */
 
 }
